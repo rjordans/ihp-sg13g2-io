@@ -1,0 +1,14 @@
+source $::env(PDK_ROOT)/$::env(PDK)/libs.tech/magic/$::env(PDK).magicrc
+
+#if {[info exists env(PDK_ROOT)] && [info exists env(PDK)]} {
+#    gds read $::env(PDK_ROOT)/$::env(PDK)/libs.ref/sg13g2_stdcell/gds/sg13g2_stdcell.gds
+#    puts "read stdcell gds."
+#} else {
+#    puts "Warning: PDK environment variables not set."
+#}
+
+#labels
+setlabel -default font FreeSans
+setlabel -default size 0.2u
+grid 5nm 5nm
+snap user

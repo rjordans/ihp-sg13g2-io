@@ -1,0 +1,18 @@
+#### xschemrc project configuration file
+set xschemrc [info script]
+puts stdout "Sourcing $xschemrc"
+
+if { [info exists env(PDK_ROOT)] && [info exists env(PDK)] && $env(PDK) eq "ihp-sg13g2" } {
+    source $env(PDK_ROOT)/$env(PDK)/libs.tech/xschem/xschemrc
+} else {
+    puts stderr "Fatal error: environment variables not set up to find IHP sg13g2 PDK."
+    exit
+}
+
+# Add current directory to xschem library path
+append XSCHEM_LIBRARY_PATH : [file normalize [file dirname [info script]]]
+
+set SG13G2_STDCELL ${PDK_ROOT}/${PDK}/libs.ref/sg13g2_stdcell/spice
+
+# Set project local netlist directory
+set netlist_dir [file normalize [file dirname [info script]]/../netlist]

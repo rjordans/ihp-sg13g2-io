@@ -1,0 +1,32 @@
+v {xschem version=3.4.8RC file_version=1.3}
+G {}
+K {type=primitive
+format="@name @@vss @@vdd @@iovss @@iovdd @@p2c @@pad @symname"
+template="name=x1"
+}
+V {}
+S {}
+F {}
+E {}
+L 4 60 70 80 70 {}
+L 4 60 90 80 90 {}
+L 4 60 30 80 30 {}
+L 4 60 50 80 50 {}
+L 4 -150 0 -130 0 {}
+L 7 60 0 80 0 {}
+B 5 -152.5 -2.5 -147.5 2.5 {name=pad dir=inout}
+B 5 77.5 -2.5 82.5 2.5 {name=p2c dir=inout}
+B 5 77.5 67.5 82.5 72.5 {name=iovdd dir=inout}
+B 5 77.5 87.5 82.5 92.5 {name=iovss dir=inout}
+B 5 77.5 27.5 82.5 32.5 {name=vdd dir=inout}
+B 5 77.5 47.5 82.5 52.5 {name=vss dir=inout}
+P 4 5 60 -20 -130 -20 -130 20 60 20 60 -20 {}
+P 4 5 60 20 -130 20 -130 110 60 110 60 20 {}
+T {@symname} -131 114 0 0 0.2 0.2 {}
+T {@name} 55 -32 0 0 0.2 0.2 {}
+T {pad} -105 -4 0 1 0.2 0.2 {}
+T {p2c} 55 -4 0 1 0.2 0.2 {}
+T {iovdd} 55 66 0 1 0.2 0.2 {}
+T {iovss} 55 86 0 1 0.2 0.2 {}
+T {vdd} 55 26 0 1 0.2 0.2 {}
+T {vss} 55 46 0 1 0.2 0.2 {}
