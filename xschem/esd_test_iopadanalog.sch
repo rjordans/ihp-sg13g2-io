@@ -136,10 +136,12 @@ vsub gnd sub! 0
 C {simulator_commands_shown.sym} 220 -770 0 0 {name=Simulator1
 simulator=ngspice
 only_toplevel=false 
-value="
+value=".option chgtol=1e-11
+.option method=gear
 .save all
 .probe i(c1)
 .control
+  set nostepsizelimit
   tran 0.1n 2u
   write esd_test_iopadanalog.raw
 

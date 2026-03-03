@@ -8,7 +8,7 @@ E {}
 L 6 1740 -510 1740 10 {dash=20}
 B 2 1370 -930 2170 -530 {flags=graph
 y1=0.19
-y2=8.2
+y2=8.6
 ypos1=0
 ypos2=2
 divy=5
@@ -124,9 +124,12 @@ C {simulator_commands_shown.sym} 220 -770 0 0 {name=Simulator1
 simulator=ngspice
 only_toplevel=false 
 value="
+.option chgtol=1e-11
+.option method=gear
 .save all
 .probe i(c1)
 .control
+  set nostepsizelimit
   tran 0.1n 2u
   write esd_test_iovdd.raw
 
